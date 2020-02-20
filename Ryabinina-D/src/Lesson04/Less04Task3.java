@@ -12,7 +12,7 @@ public class Less04Task3 {
     public static void main(String[] args) {
         double a;
         double b;
-        String c = new String();
+        String c = ("Э");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите первое число");
         a = scanner.nextDouble();
