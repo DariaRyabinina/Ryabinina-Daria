@@ -20,18 +20,14 @@ public class Less03Task2 {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 mass[i][j] = random.nextInt(10);
-                System.out.print(mass[i][j]+"  ");
+                System.out.print(mass[i][j] + "  ");
             }
             System.out.println();
         }
         for (int i = 0; i < N; i++) {
-            sum += mass[i][i];
+            sum += mass[i][i]; // нисходящая диагональ
+            sum += mass[i][N - i - 1]; // восходящая диагональ
         }
-        for (int i=(N-1);i>=0; i--) {
-             {
-                sum += mass[i][N-i-1];
-            }
-        }
-        System.out.println("Сумма диагоналей равна "+sum);
+        System.out.println("Сумма диагоналей равна " + sum);
     }
 }
