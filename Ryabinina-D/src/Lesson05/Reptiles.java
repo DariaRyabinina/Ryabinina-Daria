@@ -16,7 +16,7 @@ public class Reptiles extends Animal implements Run,Swim {
 
     @Override
     public void Legs() {
-        System.out.println("У рептилий может быть 4 лапы");
+        System.out.println("У рептилий может быть 4 лапы.");
     }
 
     @Override

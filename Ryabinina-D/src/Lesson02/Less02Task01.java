@@ -13,9 +13,8 @@ package Lesson02;
 Задание 5:
 Переписать проект с урока (вендинговый автомат) используя конструктор,
 перечисления и взаимодействие с пользователем
- */
 
-import jdk.internal.org.objectweb.asm.tree.InnerClassNode;
+ */
 
 import java.awt.*;
 import java.util.List;
@@ -37,27 +36,26 @@ public class Less02Task01 {
     public static int choiceDrink() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Укажите номер напитка");
-        int n = scanner.nextInt();
+        int drink = scanner.nextInt();
         int x; //флаг
         do {
-            if (n < 1 || n > 5) {
+            if (drink < 1 || drink > 5) {
                 System.out.println("Введите корректный номер напитка");
-                n = scanner.nextInt();
+                drink = scanner.nextInt();
                 x = 0;
             } else x = 1;
         }
         while (x == 0);
-        return n;
+        return drink;
     }
 
-    public static double Sel(double expense, int n) {
-        String m = new String();
-        while (Drinks1.getPriceNumber(n) > expense) {
+    public static double Sel(double expense, int drink) {
+        while (Drinks1.getPriceNumber(drink) > expense) {
             System.out.println("Цена превышает сумму внсенного депозита");
-            n = choiceDrink();
+            drink = choiceDrink();
         }
         System.out.println("Напиток готов");
-        expense -= Drinks1.getPriceNumber(n);
+        expense -= Drinks1.getPriceNumber(drink);
         System.out.println("Остаток на счете: " + expense);
 
         return expense;
@@ -65,8 +63,8 @@ public class Less02Task01 {
 
     public static void main(String[] args) {
         double expense = 0.0;
-        int n;
-        String k, m;
+        int drink;
+        String m;
         Scanner scanner = new Scanner(System.in);
                /* List<Drinks> arrayDrinks = new ArrayList<>();
         arrayDrinks.add(new Drinks(1, "Эспрессо", 150));
@@ -84,21 +82,22 @@ public class Less02Task01 {
         for (Drinks1 drinks11 : Drinks1.values()) {
             while (expense < drinks11.getPrice()) {
                 expense = addCash(expense);
-            } break;
+            }
+            break;
         }
-        n = choiceDrink();
+        drink = choiceDrink();
         // Drinks1 drinks11;
         //double price = Drinks1.getPriceNumber(n);
-        expense = Sel(expense, n);
-        System.out.println("-----1----");
+        expense = Sel(expense, drink);
+        //System.out.println("-----1----");
 
         for (Drinks1 drinks1 : Drinks1.values()) {
             while (expense >= drinks1.getPrice()) {
                 System.out.println("Введите Y для перхода к выбору напитка");
                 m = scanner.nextLine();
                 if (m.equals("Y") || m.equals("y")) {
-                    n = choiceDrink();
-                    expense = Sel(expense, n);
+                    drink = choiceDrink();
+                    expense = Sel(expense, drink);
 
                 } else break;
             }
@@ -108,13 +107,14 @@ public class Less02Task01 {
                 for (Drinks1 drinks22 : Drinks1.values()) {
                     while (expense < drinks22.getPrice()) {
                         expense = addCash(expense);
-                    }break;
+                    }
+                    break;
                 }
-                n = choiceDrink();
-                expense = Sel(expense, n);
+                drink = choiceDrink();
+                expense = Sel(expense, drink);
             } else {
                 if (expense > 0) {
-                    System.out.println("Ваша сдача " +expense);
+                    System.out.println("Ваша сдача " + expense);
                     break;
                 } else break;
             }

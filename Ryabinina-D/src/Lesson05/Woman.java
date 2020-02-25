@@ -1,6 +1,6 @@
 package Lesson05;
 
-public class Woman extends Human{
+public class Woman extends Human {
 
     @Override
     public void maxSpead() {
@@ -9,7 +9,8 @@ public class Woman extends Human{
     }
 
     @Override
-    public void death() {System.out.println("Средняя продолжительность жизни женщин 77,6 лет.");
+    public void death() {
+        System.out.println("Средняя продолжительность жизни женщин 77,6 лет.");
 
     }
 

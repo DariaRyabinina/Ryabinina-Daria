@@ -1,7 +1,8 @@
 package Lesson05;
 
 public interface Swim {
-   void limbs();
-   void maxwater();
+    void limbs();
+
+    void maxwater();
 
 }

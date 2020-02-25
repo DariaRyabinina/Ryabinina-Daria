@@ -8,9 +8,10 @@ public class Fish extends Animal implements Swim {
 
     @Override
     public void limbs() {
-        System.out.println("Рыбы имеют плавники и они могут плавать");
+        System.out.println("Рыбы имеют плавники и они могут плавать.");
     }
 
     @Override
-    public void maxwater() {    }
+    public void maxwater() {
+    }
 }

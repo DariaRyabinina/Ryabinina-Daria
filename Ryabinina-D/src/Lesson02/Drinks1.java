@@ -6,30 +6,30 @@ public enum Drinks1 {
     Гляссе(3, 175.5),
     Шоколад(4, 150),
     Чай(5, 100);
-    int l;
-     double ll;
+    int number;
+    double price;
 
-    Drinks1(int l, double ll) {
-        this.l = l;
-        this.ll = ll;
+    Drinks1(int number, double price) {
+        this.number = number;
+        this.price = price;
     }
 
-    Drinks1(int l) {
-        this.l = l;
+    Drinks1(int number) {
+        this.number = number;
     }
 
     public double getPrice() {
-        return (this.ll);
+        return this.price;
     }
 
-    public double getNumber() {
-        return (this.l);
+    public int getNumber() {
+        return this.number;
     }
 
-   static public double getPriceNumber(int l){
+    static public double getPriceNumber(int number) {
         for (Drinks1 drinks1 : Drinks1.values()) {
-            if (drinks1.l == l) {
-                return drinks1.ll;
+            if (drinks1.number == number) {
+                return drinks1.price;
             }
         }
         return 0;
