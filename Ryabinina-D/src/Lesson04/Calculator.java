@@ -29,10 +29,13 @@ public class Calculator {
 
         }
     }
-        static void perc(double numberOne, double numberTwo){
-            System.out.println(numberOne + " * " + numberTwo);
-            System.out.println("Процент второго чисела от первого равен " + (numberOne * 100 / numberTwo));
 
+    static void perc(double numberOne, double numberTwo) {
+        if (numberOne == 0) {
+            System.out.println("Процено от 0 ревен 0");
+        } else {
+            System.out.println("Процент второго чисела от первого равен " + (numberTwo * 100 / numberOne));
         }
     }
+}
 
