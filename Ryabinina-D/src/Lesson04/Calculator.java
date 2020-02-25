@@ -5,23 +5,34 @@ package Lesson04;
 числа. Класс должен работать как с целыми числами, так и с дробями.
 */
 
-import jdk.nashorn.internal.ir.IfNode;
-
 public class Calculator {
-    static final double e=2.718;
-    static final double p=3.141;
-    double aa;
-    double bb;
-    static double summ(double a, double b) { return (a + b); }
-    static double sub(double a, double b){
-        return (a-b);
+    static final double e = 2.718;
+    static final double p = 3.141;
+
+    static void summ(double numberOne, double numberTwo) {
+        System.out.println("Сумма введенных чисел равна " + (numberOne + numberTwo));
     }
-    static double mult(double a, double b){
-        return (a*b);
+
+    static void sub(double numberOne, double numberTwo) {
+        System.out.println("Разность введенных чисел равна " + (numberOne - numberTwo));
     }
-    static double div(double a, double b){ return (a/b); }
-    static double perc(double a, double b){
-        System.out.println(a+" * "+b);
-            return (a * 100/b);
+
+    static void mult(double numberOne, double numberTwo) {
+        System.out.println("Произведение введенных чисел равно " + (numberOne * numberTwo));
     }
-}
+
+    static void div(double numberOne, double numberTwo) {
+        if (numberTwo == 0) {
+            System.out.println("Деление на 0 запрещено");
+        } else {
+            System.out.println("Частное введенных чисел равно " + (numberOne / numberTwo));
+
+        }
+    }
+        static void perc(double numberOne, double numberTwo){
+            System.out.println(numberOne + " * " + numberTwo);
+            System.out.println("Процент второго чисела от первого равен " + (numberOne * 100 / numberTwo));
+
+        }
+    }
+

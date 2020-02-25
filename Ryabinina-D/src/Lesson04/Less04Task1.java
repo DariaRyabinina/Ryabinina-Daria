@@ -19,11 +19,11 @@ public class Less04Task1 {
         }
         str1 = matcher.replaceAll("вырезано цензурой");
         System.out.println("Количество вхождений слова Бяка - " + s);
-        System.out.println("Способ 1: \n"+str1);
+        System.out.println("Способ 1 (слово бяка): \n" + str1);
     }
 
     public static void main(String[] args) {
-        String str = new String();
+        String str;
         String str1 = new String();
         String str2 = new String();
         int s = 0;
@@ -33,7 +33,7 @@ public class Less04Task1 {
         str = str2 = scanner.nextLine();
         replase(str, str1);
 
-        System.out.println("Способ 2: \n"+str2.replace("бяка", "вырезано цензурой"));
+        System.out.println("Способ 2 (последовательность символов бяка): \n" + str2.replace("бяка", "вырезано цензурой"));
 
     }
 }
