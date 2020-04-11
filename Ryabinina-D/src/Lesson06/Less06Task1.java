@@ -20,7 +20,8 @@ public class Less06Task1 {
         personArrayList.sort(new PersonSuperComparator());
 
         for (Person p : personArrayList) {
-            p.toString();
+           System.out.println(p.toString());
+
         }
 
     }

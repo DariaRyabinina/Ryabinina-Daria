@@ -18,10 +18,8 @@ public class Less06Task3 {
     public static boolean isUnique(Map<String, String> map) {
         for (String o : map.keySet()) {
             for (String o1 : map.keySet()) {
-                if (map.get(o).equals(map.get(o1))) {
-                    if (!o.equals(o1)) {
+                if (!o.equals(o1) && map.get(o).equals(map.get(o1))) {
                         return false;
-                    }
                 }
             }
         }
@@ -40,7 +38,6 @@ public class Less06Task3 {
         for (String s : staf.keySet()) {
             System.out.println(s + " " + staf.get(s));
         }
-        isUnique(staf);
         if (isUnique(staf)) {
             System.out.println("true");
         } else {
